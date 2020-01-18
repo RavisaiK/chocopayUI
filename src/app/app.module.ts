@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginModule } from './login/login.module';
 import { NoUrlComponent } from './no-url/no-url.component'
+import { SignupModule } from './signup/signup.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NoUrlComponent } from './no-url/no-url.component'
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    LoginModule
+    LoginModule,
+    SignupModule
   ],
   providers: [],
   bootstrap: [AppComponent]
