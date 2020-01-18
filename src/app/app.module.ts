@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { HttpClientModule } from '@angular/common/http';
 import { LoginModule } from './login/login.module';
@@ -19,7 +20,8 @@ import { SignupModule } from './signup/signup.module';
     AppRoutingModule,
     HttpClientModule,
     LoginModule,
-    SignupModule
+    SignupModule,
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
