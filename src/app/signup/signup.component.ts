@@ -15,7 +15,7 @@ export class SignupComponent implements OnInit {
   ngOnInit() {
   }
 
-  signupForm : FormGroup;
+signupForm : FormGroup;
 
   createFormGroup() {
     return new FormGroup({
@@ -34,5 +34,8 @@ export class SignupComponent implements OnInit {
     this.authService.register(this.signupForm.value).subscribe((res) => {
       this.router.navigateByUrl('home');
     });
+  }
+  public login() {
+    this.router.navigate(['/login'])
   }
 }

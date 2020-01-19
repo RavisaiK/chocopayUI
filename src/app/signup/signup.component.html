@@ -1,31 +1,66 @@
-<div class="container">
-    <div class="card border-0 shadow mt-3">
-        <form class="p-5">
-            <div class="form-group">
-                <label for="userName">Username</label>
-                <input type="email" class="form-control" id="userName" aria-describedby="emailHelp"
-                    placeholder="Enter email">
+<div class="container f-h d-flex align-items-center justify-content-center">
+    <div class="card border-0 shadow bg-light">
+        <div class="card-body text-center">
+            <img src="../assets/CHOCOPAY.svg" class="img-fluid" width="50%">
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="text-gray my-2">User</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="userName">Username</label>
+                            <input type="email" class="form-control" id="userName" aria-describedby="emailHelp"
+                                placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                placeholder="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile">Mobile</label>
+                            <input type="email" class="form-control" id="mobile" aria-describedby="emailHelp"
+                                placeholder="Mobile number">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-gray my-2">Business</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="userName">Company name <span class="text-red">*</span></label>
+                            <input type="email" class="form-control" id="userName" aria-describedby="emailHelp"
+                                placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                            <label for="userName">Email <span class="text-red">*</span></label>
+                            <input type="email" class="form-control" id="userName" aria-describedby="emailHelp"
+                                placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Address <span class="text-red">*</span></label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                placeholder="Address">
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile">GSTIN <span class="text-red">*</span></label>
+                            <input type="email" class="form-control" id="mobile" aria-describedby="emailHelp"
+                                placeholder="GSTIN">
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="email">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
-                    placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                    else.</small>
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-choco w-100">Submit<i class="fas fa-plus pl-3"></i></button>
             </div>
-            <div class="form-group">
-                <label for="mobile">Mobile</label>
-                <input type="email" class="form-control" id="mobile" aria-describedby="emailHelp"
-                    placeholder="Enter email">
+            <div class="d-flex justify-content-start">
+                <h5 class="main-tag mr-3 mt-3 c-p" (click)="login()"><i class="fas fa-chevron-left pr-3"></i>Back</h5>
             </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-            </div>
-            <div class="d-flex justify-content-end">
-                <button type="submit" class="btn btn-secondary mr-3 w-50">back</button>
-                <button type="submit" class="btn btn-primary w-50">Submit</button>
-            </div>
-        </form>
+        </div>
     </div>
 </div>
