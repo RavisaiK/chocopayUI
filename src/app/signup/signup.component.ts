@@ -10,28 +10,32 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class SignupComponent implements OnInit {
 
-  constructor(private authService: AuthService, private router: Router) { }
-
   ngOnInit() {
   }
 
-signupForm : FormGroup;
+  signupForm: FormGroup;
 
   createFormGroup() {
     return new FormGroup({
       name: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required]),
-      address: new FormControl('',[Validators.required,Validators.required]),
-      users: new FormGroup({
-        name:new FormControl('',[Validators.required]),
-        password: new FormControl('',[Validators.required])
-      })
+      address: new FormControl('', [Validators.required, Validators.required]),
+      userName: new FormControl('', [Validators.required]),
+      userPassword: new FormControl('', [Validators.required]),
+      userEmail: new FormControl('', [Validators.required])
     });
+  }
+
+  constructor(private authService: AuthService, private router: Router) {
+    this.signupForm = this.createFormGroup();
   }
 
   register() {
     console.log(this.signupForm.value);
-    this.authService.register(this.signupForm.value).subscribe((res) => {
+    var formData = this.signupForm.value;
+    var users = [{name:formData.userName,email:formData.userEmail,password:formData.userPassword}];
+    formData.users = users;
+    this.authService.register(formData).subscribe((res) => {
       this.router.navigateByUrl('home');
     });
   }

@@ -10,12 +10,12 @@ import { User } from '../models/user';
   providedIn: 'root'
 })
 export class AuthService {
-  AUTH_SERVER = "http://localhost:3000";
+  AUTH_SERVER = "http://192.168.100.164:8080";
   authSubject  =  new  BehaviorSubject(false);
   constructor(private httpClient: HttpClient) { }
 
   register(business:Business): Observable<JwtResponse> {
-    return this.httpClient.post<JwtResponse>(`${this.AUTH_SERVER}/register`, business).pipe(
+    return this.httpClient.post<JwtResponse>(`${this.AUTH_SERVER}/signup`, business).pipe(
       tap((res:  JwtResponse ) => {
         if (res.user) {
           localStorage.set("ACCESS_TOKEN", res.user.access_token);
