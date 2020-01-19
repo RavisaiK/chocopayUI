@@ -14,7 +14,11 @@ export class SignupComponent implements OnInit {
   }
 
   public login() {
-    this.router.navigate(['/login'])
+    this.router.navigate(['/login']);
+  }
+
+  public board() {
+    this.router.navigate(['/board']);
   }
 
 }

@@ -9,6 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginModule } from './login/login.module';
 import { NoUrlComponent } from './no-url/no-url.component'
 import { SignupModule } from './signup/signup.module';
+import { BoardModule } from './board/board.module';
+import {DndModule} from 'ng2-dnd';
 
 @NgModule({
   declarations: [
@@ -17,11 +19,13 @@ import { SignupModule } from './signup/signup.module';
   ],
   imports: [
     BrowserModule,
+    DndModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
     LoginModule,
     SignupModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    BoardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
