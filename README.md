@@ -1,2 +1,2 @@
-# chocopayUI
+## chocopayUI
 UI for chocopay
